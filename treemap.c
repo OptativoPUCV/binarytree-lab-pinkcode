@@ -76,7 +76,6 @@ else{
   thedad->right = neuwu;
 }
 
-tree->current = neuwu;
 
 }
 
