@@ -154,24 +154,20 @@ void * firstTreeMap(TreeMap * tree) {
 
 
 void * nextTreeMap(TreeMap * tree) {
-  if (tree->root == NULL) return NULL;
    TreeNode * aux = tree->current;
    if (aux->right != NULL){
-        do{
+       do{
          aux = aux->right;
-        }while (aux->right->value != NULL);
-      tree->current = aux;
-      return aux->value;
+        }while (aux->right != NULL);
    }
     else {
-         do{
- 
-        aux = aux->left;
-      }while (aux->value != NULL);
-      tree->current = aux;
-      return aux->value;
+       do{
+       aux = aux->left;
+     }while (aux->left != NULL);
    }
-
+ tree->current= aux;
+ return aux->value;
     return NULL;
 }
+  
   
