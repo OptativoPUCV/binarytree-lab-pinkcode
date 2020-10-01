@@ -157,9 +157,9 @@ void * nextTreeMap(TreeMap * tree) {
   if (tree->root == NULL) return NULL;
    TreeNode * aux = tree->current;
    if (aux->right != NULL){
-       do{
-        aux = aux->right;
-      }while (aux->value != NULL);
+        do{
+         aux = aux->right;
+        }while (aux->right->value != NULL);
       tree->current = aux;
       return aux->value;
    }
