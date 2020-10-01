@@ -132,9 +132,9 @@ void * firstTreeMap(TreeMap * tree) {
 
  do{
 
-      aux = aux->left;
+   aux = aux->left;
  }while (aux->left != NULL);
- return aux;
+ return aux->value;
 }
 
 
