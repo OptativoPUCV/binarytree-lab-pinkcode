@@ -156,11 +156,11 @@ void * firstTreeMap(TreeMap * tree) {
 void * nextTreeMap(TreeMap * tree) {
    TreeNode * aux = tree->current;
    if (aux->right != NULL){
-      tree->current = aux;
-       return aux->right->value;
+  
+      return aux->right->value;
    }
     else {
-    tree->current = aux;
+
        return aux->left->value;
    }
 
