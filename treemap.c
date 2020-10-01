@@ -160,7 +160,7 @@ void * nextTreeMap(TreeMap * tree) {
        do{
         aux = aux->right;
       }while (aux->value != NULL);
-      tree->current = aux->right;
+      tree->current = aux;
       return aux->value;
    }
     else {
@@ -168,7 +168,7 @@ void * nextTreeMap(TreeMap * tree) {
  
         aux = aux->left;
       }while (aux->value != NULL);
-      tree->current = aux->left;
+      tree->current = aux;
       return aux->value;
    }
 
