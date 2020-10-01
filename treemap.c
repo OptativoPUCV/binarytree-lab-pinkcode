@@ -154,9 +154,10 @@ void * firstTreeMap(TreeMap * tree) {
 
 
 void * nextTreeMap(TreeMap * tree) {
+  if (tree->root == NULL) return NULL;
    TreeNode * aux = tree->current;
    if (aux->right != NULL){
-  
+       
       return aux->right->value;
    }
     else {
