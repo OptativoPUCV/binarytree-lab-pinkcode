@@ -149,7 +149,11 @@ void * searchTreeMap(TreeMap * tree, void* key) {
 
 
 void * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+  if (tree == NULL) return NULL;
+  else if (is_equal(tree, tree->root->key,key)){
+    return tree->root->value;
+  }
+  return NULL;
 }
 
 void * firstTreeMap(TreeMap * tree) {
